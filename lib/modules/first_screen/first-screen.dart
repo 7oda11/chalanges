@@ -22,9 +22,10 @@ class Newsapp extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 8.0),
-            child: Icon(Icons.notifications,color: Colors.orange,
-
-            ),
+            child: IconButton(
+              onPressed: (){},
+              icon: Icon(Icons.notifications,color: Colors.orange,),
+            )
           ),
         ],
       ),
@@ -47,16 +48,17 @@ class Newsapp extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 children: [
                   Image(image: NetworkImage("https://product.takwene.com/Files/Catalog/Products/13072/photo_735f3b72-b2e8-4393-af19-06f9a88fd494.png"),
-                  height: 300,),
+                  height: 300,width: double.infinity,),
                  Padding(
                    padding: const EdgeInsets.only(bottom: 50.0),
                    child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.center,
                      children: [
                        Text(
                          "Peloton to shed About 800 Jobs ",
                          style: TextStyle(
                            fontWeight: FontWeight.bold,
-                           fontSize: 25,
+                           fontSize: 20,
                            color: Colors.black,
                          ),
                        ),
